@@ -51,7 +51,7 @@ public class UsuarioController {
 
     @Operation(summary = "Busca todos os usuários", description = "Retorna uma lista com todos os usuarios")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Users retrieved successfully",
+            @ApiResponse(responseCode = "200", description = "Usuarios retornados com successfully",
                     content = @Content(schema = @Schema(implementation = UsuarioDTO.class)))
     })
     @GetMapping
@@ -89,9 +89,9 @@ public class UsuarioController {
 
     @Operation(summary = "Atualiza um usuário", description = "Atualiza um usuário existente")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "User updated successfully",
+            @ApiResponse(responseCode = "200", description = "Usuario atualizado com sucesso",
                     content = @Content(schema = @Schema(implementation = UsuarioDTO.class))),
-            @ApiResponse(responseCode = "404", description = "User not found",
+            @ApiResponse(responseCode = "404", description = "Usuário não encontrado",
                     content = @Content(schema = @Schema())),
             @ApiResponse(responseCode = "500", description = "Servidor indisponível",
                     content = @Content(schema = @Schema()))
