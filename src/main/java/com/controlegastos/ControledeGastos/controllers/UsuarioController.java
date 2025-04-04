@@ -1,6 +1,7 @@
 package com.controlegastos.ControledeGastos.controllers;
 
 import com.controlegastos.ControledeGastos.dtos.UsuarioDTO;
+import com.controlegastos.ControledeGastos.entities.Despesa;
 import com.controlegastos.ControledeGastos.entities.Usuario;
 import com.controlegastos.ControledeGastos.services.UsuarioService;
 import org.springframework.http.HttpStatus;
@@ -70,9 +71,12 @@ public class UsuarioController {
     public ResponseEntity<?> deletarUsuario(@PathVariable Long usuario_id) {
         try{
             usuarioService.deleteUsuario(usuario_id);
-            return ResponseEntity.status(HttpStatus.OK).body("Usuario deletado com sucesso!");
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
         }catch (Exception e){
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.getMessage());
         }
     }
+
+
+
 }
