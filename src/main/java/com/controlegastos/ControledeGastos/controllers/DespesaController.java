@@ -29,7 +29,7 @@ public class DespesaController {
     @Operation(summary = "Criar uma despesa", description = "Add uma nova despesa ao sistema")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Despesa criada com sucesso",
-                    content = @Content(schema = @Schema(implementation = UsuarioDTO.class))),
+                    content = @Content(schema = @Schema(implementation = Despesa.class))),
             @ApiResponse(responseCode = "400", description = "Request inválido",
                     content = @Content(schema = @Schema())),
             @ApiResponse(responseCode = "500", description = "Servidor indisponível",

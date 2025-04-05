@@ -51,8 +51,10 @@ public class UsuarioController {
 
     @Operation(summary = "Busca todos os usuários", description = "Retorna uma lista com todos os usuarios")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Usuarios retornados com successfully",
-                    content = @Content(schema = @Schema(implementation = UsuarioDTO.class)))
+            @ApiResponse(responseCode = "200", description = "Usuarios retornados com sucesso",
+                    content = @Content(schema = @Schema(implementation = UsuarioDTO.class))),
+            @ApiResponse(responseCode = "500", description = "Servidor indisponível",
+                    content = @Content(schema = @Schema()))
     })
     @GetMapping
     public ResponseEntity<?> listarUsuarios() {
