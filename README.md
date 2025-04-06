@@ -4,7 +4,7 @@ Este projeto é uma API REST desenvolvida com o objetivo de **demonstrar boas pr
 
 ## 🚀 Tecnologias Utilizadas
 
-- Java 17
+- Java 21
 - Spring Boot
 - Spring Data JPA
 - MySQL
